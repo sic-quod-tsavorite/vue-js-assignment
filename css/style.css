@@ -54,10 +54,6 @@ button {
   background: url("../assets/full.png") center no-repeat;
 }
 
-#player.dead {
-  background: url("../assets/done.png") center no-repeat;
-}
-
 #player-damage {
   margin: 0 auto 20px auto;
   width: 200px;
