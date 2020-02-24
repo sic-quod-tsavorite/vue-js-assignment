@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h3>{{ greet('Morning') }}</h3>
+      <p>Name: {{ name }}</p>
+      <p>Skill: {{ skill }}</p>
+      <h3>{{ name }}s age: {{ age }}</h3>
+      <button type="button" v-on:click="add(1)">Add Age</button>
+      <button type="button" v-on:click="subtract(1)">Subtract Age</button>
+      <button type="button" v-on:dblclick="add(5)">Add 5 Years</button>
+      <button type="button" v-on:dblclick="subtract(5)">
+        Subtract 5 Years
+      </button>
+      <hr />
+      <div id="canvas" v-on:mousemove="updateMousePos">
+        {{ x }}, {{ y }}
+      </div>
+
+      <hr />
+
+      <label>Name:</label>
+      <input type="text" v-on:keyup.enter="logName" />
+      <label>Age:</label>
+      <input type="text" v-on:keyup.space="logAge" />
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

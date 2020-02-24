@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ded doom guy game</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <!--<body>
+    <div id="vue-app">
+      <div>HP: {{ hp }}</div>
+      <div id="healthBG">
+        <div id="healthBar"></div>
+      </div>
+      <button type="button" v-on:click="subtractHP(10)">Attack him</button>
+    </div>
+
+    <script src="js/newApp.js"></script>
+  </body>-->
+  <body>
+    <div id="vue-app">
+      <div id="player" v-bind:class="{dead: ended}"></div>
+      <div id="player-damage"></div>
+      <div id="player-health">
+        <div id="color" v-bind:style="{ width: health + '%' }"></div>
+      </div>
+
+      <div id="buttons">
+        <button v-on:click="damage" v-show="!ended">Damage</button>
+        <button v-on:click="restart">Restart</button>
+      </div>
+    </div>
+    <script src="js/newApp.js"></script>
+  </body>
+</html>
