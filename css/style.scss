@@ -64,3 +64,13 @@ button {
   height: 20px;
   background-color: darkgreen;
 }
+
+#damageHealthText {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.healthText {
+  margin-top: -100px;
+}

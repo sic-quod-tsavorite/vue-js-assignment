@@ -10,10 +10,13 @@
   <body>
     <div id="vue-app">
       <div id="player" v-bind:class="{dead: ended}"></div>
+      <div id="damageHealthText" class="healthText">Health: {{ health }}</div>
       <div id="player-damage"></div>
       <div id="player-health">
         <div id="color" v-bind:style="{ width: health + '%' }"></div>
       </div>
+
+      <div id="damageHealthText">Damage Dealt: {{ punch }}</div>
 
       <div id="buttons">
         <button v-on:click="damage" v-show="!ended">Damage</button>

@@ -2,13 +2,16 @@ new Vue({
   el: '#vue-app',
   data: {
     health: 100,
-    ended: false
+    ended: false,
+    punch: 0
   },
   methods: {
     damage: function() {
-      this.health -= 10;
+      this.punch = Math.floor((Math.random()*10)+1);
+      this.health -= this.punch;
       if (this.health <= 0) {
         this.ended = true;
+        this.health = 0;
         document.getElementById('player').style.backgroundImage =
           'url(assets/done.png)';
       } else if (this.health <= 70 && this.health > 30) {
@@ -25,6 +28,7 @@ new Vue({
     restart: function() {
       this.health = 100;
       this.ended = false;
+      this.punch = 0;
       document.getElementById('color').style.backgroundColor = 'darkgreen';
       document.getElementById('player').style.backgroundImage =
         'url(assets/full.png)';
